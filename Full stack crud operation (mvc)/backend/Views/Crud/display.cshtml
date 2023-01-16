@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Home Page";
+    List<User> U=(List<User>)ViewData["display"];
+}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">email</th>
+    </tr>
+  </thead>
+  <tbody>
+    @{
+    
+        @foreach (User item in U)
+        {
+                 <tr>
+                 <th>@item.Id</th>
+                 <td>@item.Name</td>
+                 <td>@item.Email</td>
+                 </tr>
+            
+        }
+     
+
+    }
+    
+  </tbody>
+</table>
